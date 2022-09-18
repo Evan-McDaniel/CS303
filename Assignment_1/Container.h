@@ -30,7 +30,7 @@ public:
 	* @param the index in the array to change
 	* @param the value to change it to
 	*/
-	void set_value(int index, int value);
+	int* set_value(int index, int value);
 
 	/**
 	* adds the number to the end of array
@@ -45,6 +45,9 @@ public:
 	void remove(int index);
 	/**
 	* to output the numbers array
+	* @param an instance of Container
+	* @param an ostrea
+	* @return the same ostream that was passed
 	*/
 	friend ostream& operator<<(ostream&, const Container&);
 

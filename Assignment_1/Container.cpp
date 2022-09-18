@@ -4,20 +4,25 @@
 using namespace std;
 
 void Container::read_file(string fileName) {
+	cout << "Reading " << fileName << " into array\n";
 	ifstream in(fileName);
+	in.exceptions(ios::failbit);
 	int index = 0;
-	while (in && index <= size) {
+	while (in && index < size) {
 		try {
 			in >> numbers[index];
 		}
 		catch (exception& e) {
-			cerr << "input must be all numbers";
+			cerr << "ERROR: input must be all numbers\n";
+			cerr << e.what() << "\n";
+			exit(1);
 		}
 		index++;
 	}
 	if (index > size + 1) {
-		cout << "too many numbers";
+		cout << "too many numbers\n";
 	}
+	in.close();
 }
 
 int Container::check_integer(int number) {
@@ -32,9 +37,14 @@ int Container::check_integer(int number) {
 	return -1;
 }
 
-void Container::set_value(int index, int value) {
+int* Container::set_value(int index, int value) {
 	try {
+		int temp = numbers[index];
 		numbers[index] = value;
+		int* nums = new int[2];
+		nums[0] = temp;
+		nums[1] = value;
+		return nums;
 	}
 	catch (exception& e) {
 		cout << "index must be in array";
@@ -56,14 +66,20 @@ void Container::add(int number) {
 
 void Container::remove(int index) {
 	int* temp_arr = numbers;
+	bool found = false;
 	numbers = new int[size - 1];
 	for (unsigned int i = 0; i < size; i++)
 	{
 		if (i == index)
 		{
-			continue;
+			found = true;
 		}
-		numbers[i] = temp_arr[i];
+		if (!found) {
+			numbers[i] = temp_arr[i];
+		}
+		else {
+			numbers[i] = temp_arr[i + 1];
+		}
 	}
 	delete[] temp_arr;
 	temp_arr = NULL;
@@ -71,9 +87,11 @@ void Container::remove(int index) {
 }
 
 ostream& operator<<(ostream& out, const Container& c) {
+	cout << "outputting the numbers array of the instance...\n";
 	for (unsigned int i = 0; i < c.size; i++)
 	{
 		cout << c.numbers[i] << " ";
 	}
+	cout << "\n";
 	return out;
 }
