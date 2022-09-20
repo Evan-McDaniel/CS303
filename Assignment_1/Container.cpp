@@ -4,9 +4,20 @@
 using namespace std;
 
 void Container::read_file(string fileName) {
-	cout << "Reading " << fileName << " into array\n";
-	ifstream in(fileName);
+	cout << "Enter a file name to read (numbers.txt for default): ";
+	string file;
+	cin >> file;
+	//cout << "Reading " << fileName << " into array\n";
+	ifstream in;
 	in.exceptions(ios::failbit);
+	try {
+		in.open(file);
+	}
+	catch (exception& e) {
+		cout << "Could not open file..using "<< fileName << " instead\n";
+		in.clear();
+		in.open(fileName);
+	}
 	int index = 0;
 	while (in && index < size) {
 		try {

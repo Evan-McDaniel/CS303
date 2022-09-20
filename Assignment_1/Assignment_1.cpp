@@ -13,12 +13,17 @@ int main()
     cout << arr;
     int check;
     cout << "Enter a number to search for: ";
-    try {
-        cin >> check;
-    }
-    catch(...) {
-        cout << "Not a valid integer";
-        exit(1);
+    while (true) {
+        try {
+            cin >> check;
+            break;
+        }
+        catch (...) {
+            cout << "Not a valid integer\nTry again: ";
+            cin.clear();
+            cin.ignore();
+            //exit(1);
+        }
     }
     cout << check << " is first located at index " << arr.check_integer(check) << "\n";
     int* values = arr.set_value(0, check);
