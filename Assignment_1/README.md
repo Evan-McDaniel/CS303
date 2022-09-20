@@ -20,7 +20,7 @@ You will need to provide one number which will be used for testing the methods.
 This needs to be a valid number.
 The other numbers are hard coded in to main for testing.
 
-The program starts by collecting the file name and reading those files into the array. It then outputs the array. Next it gets a number from user. Then it tests the check, add, and remove functions and outputs the array after each modification.
+The program starts by collecting the file name and reading those files into the array. It then outputs the array. Next it gets a number from user. Then it tests the check, set, add, and remove functions and outputs the array after each modification.
 
 Output should look similar to this:
 ![image](https://user-images.githubusercontent.com/90816235/191148068-7c2aa659-db90-4609-b81c-5b274cf67c35.png)
