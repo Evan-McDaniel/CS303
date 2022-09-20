@@ -21,4 +21,4 @@ This needs to be a valid number.
 The other numbers are hard coded in to main for testing.
 
 Output should look similar to this:
-![image](https://user-images.githubusercontent.com/90816235/190930482-4c264f5f-a893-4ecf-8850-26c73af9f17c.png)
+![image](https://user-images.githubusercontent.com/90816235/191148068-7c2aa659-db90-4609-b81c-5b274cf67c35.png)
