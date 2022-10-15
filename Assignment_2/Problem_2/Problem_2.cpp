@@ -16,6 +16,7 @@ int main()
         cout << "TESTING FOR PROFESSIONAL EMPLOYEE:\n";
         double pay = 50;
         double hours = 40;
+        cout << "Employee pay is: " << pay << "\nEmployee hours are: " << hours << endl;
         Professional employee1(pay, hours);
         double salary = employee1.calculateSalary();
         cout << "Employee salary is: " << salary;
@@ -32,6 +33,7 @@ int main()
         cout << "\n\nTESTING FOR NONPROFESSIONAL EMPLOYEE:\n";
         pay = 15;
         hours = 20;
+        cout << "Employee pay is: " << pay << "\nEmployee hours are: " << hours << endl;
         Nonprofessional employee2(pay, hours);
         salary = employee2.calculateSalary();
         cout << "Employee salary is: " << salary;
