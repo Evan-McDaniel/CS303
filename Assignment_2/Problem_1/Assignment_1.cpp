@@ -19,10 +19,19 @@ int main()
                 cin >> check;
                 break;
             }
-            catch (...) {
+            catch (ios_base::failure& f) {
                 cout << "Not a valid integer\nTry again: ";
                 cin.clear();
                 cin.ignore();
+            }
+            catch (exception& ex) {
+                cerr << "Fatal Error occured in reading value\n";
+                cerr << ex.what() << endl;
+                abort();
+            }
+            catch (...) {
+                cerr << "Undefined exception occured in reading value\n";
+                abort();
             }
         }
         cout << check << " is first located at index " << arr.check_integer(check) << "\n";
@@ -33,10 +42,19 @@ int main()
                 cin >> check;
                 break;
             }
-            catch (...) {
+            catch (ios_base::failure& f) {
                 cout << "Not a valid integer\nTry again: ";
                 cin.clear();
                 cin.ignore();
+            }
+            catch (exception& ex) {
+                cerr << "Fatal Error occured in reading value\n";
+                cerr << ex.what() << endl;
+                abort();
+            }
+            catch (...) {
+                cerr << "Undefined exception occured in reading value\n";
+                abort();
             }
         }
         int* values = arr.set_value(0, check);
@@ -49,10 +67,19 @@ int main()
                 cin >> check;
                 break;
             }
-            catch (...) {
+            catch (ios_base::failure& f) {
                 cout << "Not a valid integer\nTry again: ";
                 cin.clear();
                 cin.ignore();
+            }
+            catch (exception& ex) {
+                cerr << "Fatal Error occured in reading value\n";
+                cerr << ex.what() << endl;
+                abort();
+            }
+            catch (...) {
+                cerr << "Undefined exception occured in reading value\n";
+                abort();
             }
         }
         cout << "Adding " << check << " to array\n";
