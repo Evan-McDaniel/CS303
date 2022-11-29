@@ -4,9 +4,11 @@
 #include <iostream>
 #include "Functions.h"
 
+using namespace std;
+
+
 int main()
 {
-    std::cout << "Hello World!\n";
     //testing the function for question 1
     queue<int> q;
     q.push(1);
