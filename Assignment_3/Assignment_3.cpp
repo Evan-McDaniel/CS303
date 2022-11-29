@@ -9,24 +9,39 @@ using namespace std;
 
 int main()
 {
-    //testing the function for question 1
+    //testing function 1
+    cout << "testing the function for question 1:\n";
     queue<int> q;
+    cout << "pushed 1 to queue\n";
     q.push(1);
+    cout << "pushed 2 to queue\n";
     q.push(2);
+    cout << "pushed 3 to queue\n";
     q.push(3);
-    cout << "Front of Q is: " << q.front();
+    cout << "Front of Q is: " << q.front() << endl;
+    cout << "running function\n";
     move_to_rear(q);
-    cout << "\nFront of Q is: " << q.front();
-    //testing function for question 2
+    cout << "Front of Q is: " << q.front() << endl;
+
+    //testing function 2
+    cout << "\ntesting function for question 2:\n";
+    string word = "hello";
+    cout << "testing " << word << ": ";
+    cout << isPalindrome(word);
+    word = "level";
+    cout << "\ntesting " << word << ": ";
+    cout << isPalindrome(word) << endl;
+    word = "h";
+    cout << "testing " << word << ": ";
+    cout << isPalindrome(word) << endl;
+    word = "racecar";
+    cout << "testing " << word << ": ";
+    cout << isPalindrome(word) << endl;
+    word = "test";
+    cout << "testing " << word << ": ";
+    cout << isPalindrome(word) << endl;
+    word = "";
+    cout << "testing " << word << ": ";
+    cout << isPalindrome(word) << endl;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
