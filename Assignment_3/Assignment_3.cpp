@@ -19,9 +19,11 @@ int main()
     cout << "pushed 3 to queue\n";
     q.push(3);
     cout << "Front of Q is: " << q.front() << endl;
+    cout << "rear of Q is: " << q.back() << endl;
     cout << "running function\n";
     move_to_rear(q);
     cout << "Front of Q is: " << q.front() << endl;
+    cout << "rear of Q is: " << q.back() << endl;
 
     //testing function 2
     cout << "\ntesting function for question 2:\n";
@@ -43,5 +45,7 @@ int main()
     word = "";
     cout << "testing " << word << ": ";
     cout << isPalindrome(word) << endl;
+
+    //Question 5
 }
 
