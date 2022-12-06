@@ -1,4 +1,5 @@
 To run this project, run the exe file.
+Answers for 1, 2, and 5 are in one project in VS. The functions are in the header file and testing is done in the main function.
 Answers to questions 3 and 4 are in the 3and4.docx word document.
 Screenshots of answers to question 3 and 4:
 
