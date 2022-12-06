@@ -47,5 +47,16 @@ int main()
     cout << isPalindrome(word) << endl;
 
     //Question 5
+    cout << "\nQuestion 5:\n";
+    map<string, string> stateDataMap;
+    stateDataMap["Nebraska"] = "Lincoln";
+    stateDataMap["New York"] = "Albany";
+    stateDataMap["Ohio"] = "Columbus";
+    stateDataMap["California"] = "Sacramento";
+    stateDataMap["Massachusetts"] = "Boston";
+    stateDataMap["Texas"] = "Austin";
+    cout << "Running map to_string method\n";
+    to_string(stateDataMap);
+    stateDataMap["California"] = "Los Angeles";
 }
 

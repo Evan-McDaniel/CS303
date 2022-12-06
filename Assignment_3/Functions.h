@@ -1,5 +1,6 @@
 #pragma once
 #include <queue>
+#include <map>
 
 using namespace std;
 
@@ -32,3 +33,23 @@ bool isPalindrome(string word, int index = 0) {
 	}
 	return isPalindrome(word, ++index);
 }
+
+//Functions for question 5
+/**
+* Function that outputs data stored in a map
+* @param: map to output
+* @return: void
+*/
+void to_string(map<string, string> m) {
+	map<string, string>::iterator itr = m.begin();
+	while (itr != m.end()) {
+		cout << itr->first << ": " << itr->second << endl;
+		itr++;
+	}
+}
+
+/**
+* Function that outputs the capital from a given state in a map
+* @param: state name, map to search
+* @return: void
+*/
