@@ -49,6 +49,7 @@ int main()
     //Question 5
     cout << "\nQuestion 5:\n";
     map<string, string> stateDataMap;
+    cout << "creating map and adding entries\n";
     stateDataMap["Nebraska"] = "Lincoln";
     stateDataMap["New York"] = "Albany";
     stateDataMap["Ohio"] = "Columbus";
@@ -58,5 +59,12 @@ int main()
     cout << "Running map to_string method\n";
     to_string(stateDataMap);
     stateDataMap["California"] = "Los Angeles";
+    cout << "changed capital of CA to Los Angeles\n";
+    to_string(stateDataMap);
+    cout << "enter a state to search for the capital: ";
+    string state;
+    cin >> state;
+    cout << "Searching capital for " << state << endl;
+    getCapitalName(stateDataMap, state);
 }
 

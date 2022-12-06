@@ -1,6 +1,7 @@
 #pragma once
 #include <queue>
 #include <map>
+#include <string>
 
 using namespace std;
 
@@ -53,3 +54,12 @@ void to_string(map<string, string> m) {
 * @param: state name, map to search
 * @return: void
 */
+void getCapitalName(map<string, string> m, string stateName) {
+	string capital = m[stateName];
+	if (capital == "") {
+		cout << "State not found";
+	}
+	else {
+		cout << "Capital is: " << capital;
+	}
+}
